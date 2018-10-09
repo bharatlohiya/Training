@@ -1,0 +1,10 @@
+;Run("notepad.exe")
+;WinWaitActive("Untitled - Notepad")
+;ControlSend("Untitled - Notepad","",15,"E:\NATARAJAN RAMANATHAN_Trainer.pdf")
+;WinClose("Untitled - Notepad")
+;ControlClick("Notepad","","[CLASS:Button; INSTANCE:2]")
+;$CmdLine[0] - Number of parameters in command prompt
+WinWaitActive("Open")
+;MsgBox(0,"Upload File",$CmdLine[1])
+ControlSend("Open","","[CLASS:Edit; INSTANCE:1]",$CmdLine[1])
+ControlClick("Open","","[CLASS:Button; INSTANCE:1]")
